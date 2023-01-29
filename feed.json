@@ -1,31 +1,31 @@
 {
     "version": "https://jsonfeed.org/version/1",
-    "title": "MySite",
-    "description": "",
+    "title": "This is BlueDog'house",
+    "description": "这里是一个摆烂小狗的happy小屋，随缘更新",
     "home_page_url": "http://example.com",
     "items": [
         {
-            "id": "http://example.com/2022/03/24/test1/",
-            "url": "http://example.com/2022/03/24/test1/",
+            "id": "http://example.com/test1/",
+            "url": "http://example.com/test1/",
             "title": "test1",
             "date_published": "2022-03-24T15:04:54.000Z",
             "content_html": "<p>gicgaosdha</p>\n",
             "tags": []
         },
         {
-            "id": "http://example.com/2021/05/19/hello1/",
-            "url": "http://example.com/2021/05/19/hello1/",
+            "id": "http://example.com/hello1/",
+            "url": "http://example.com/hello1/",
             "title": "hello1",
             "date_published": "2021-05-19T13:36:20.000Z",
             "content_html": "<p>hello</p>\n",
             "tags": []
         },
         {
-            "id": "http://example.com/2021/05/19/hello-jsakd/",
-            "url": "http://example.com/2021/05/19/hello-jsakd/",
+            "id": "http://example.com/hello-jsakd/",
+            "url": "http://example.com/hello-jsakd/",
             "title": "hello-jsakd",
             "date_published": "2021-05-19T12:38:50.000Z",
-            "content_html": "<p>aaaaaa </p>\n<p>adsasdasdasd</p>\n<figure class=\"highlight python\"><table><tr><td class=\"gutter\"><pre><span class=\"line\">1</span><br><span class=\"line\">2</span><br><span class=\"line\">3</span><br><span class=\"line\">4</span><br><span class=\"line\">5</span><br></pre></td><td class=\"code\"><pre><span class=\"line\"></span><br><span class=\"line\">heloo</span><br><span class=\"line\"></span><br><span class=\"line\"><span class=\"built_in\">print</span>(<span class=\"string\">&quot;hello world&quot;</span>)</span><br><span class=\"line\"></span><br></pre></td></tr></table></figure>\n\n",
+            "content_html": "<p>aaaaaa</p>\n<p>adsasdasdasd</p>\n<figure class=\"highlight python\"><figcaption data-lang=\"python\"></figcaption><table><tr><td data-num=\"1\"></td><td><pre>heloo</pre></td></tr><tr><td data-num=\"2\"></td><td><pre></pre></td></tr><tr><td data-num=\"3\"></td><td><pre><span class=\"token keyword\">print</span><span class=\"token punctuation\">(</span><span class=\"token string\">\"hello world\"</span><span class=\"token punctuation\">)</span></pre></td></tr></table></figure>",
             "tags": []
         }
     ]
