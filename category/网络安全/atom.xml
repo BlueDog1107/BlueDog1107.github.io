@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://bluedog1107.github.io</id>
+    <title>This is BlueDog&#39;house • Posts by &#34;网络安全&#34; category</title>
+    <link href="https://bluedog1107.github.io" />
+    <updated>2023-02-07T06:05:25.000Z</updated>
+    <category term="笔记" />
+    <category term="随记" />
+    <category term="网安" />
+    <category term="渗透" />
+    <entry>
+        <id>https://bluedog1107.github.io/websafe/%E7%BD%91%E7%AB%99%E5%AE%9E%E6%88%98/</id>
+        <title>网站实战</title>
+        <link rel="alternate" href="https://bluedog1107.github.io/websafe/%E7%BD%91%E7%AB%99%E5%AE%9E%E6%88%98/"/>
+        <content type="html">&lt;p&gt;xxxxx&lt;/p&gt;
+</content>
+        <category term="网安" />
+        <category term="渗透" />
+        <updated>2023-02-07T06:05:25.000Z</updated>
+    </entry>
+</feed>

@@ -2,17 +2,37 @@
     "version": "https://jsonfeed.org/version/1",
     "title": "This is BlueDog'house",
     "description": "这里是一个摆烂小狗的happy小屋，随缘更新",
-    "home_page_url": "https://github.com/BlueDog1107/BlueDog1107.github.io",
+    "home_page_url": "https://bluedog1107.github.io",
     "items": [
         {
-            "id": "https://github.com/BlueDog1107/BlueDog1107.github.io/note/first-article/",
-            "url": "https://github.com/BlueDog1107/BlueDog1107.github.io/note/first-article/",
-            "title": "first_article",
-            "date_published": "2023-01-29T10:38:11.000Z",
-            "content_html": "<p>this is my first article</p>\n",
+            "id": "https://bluedog1107.github.io/note/%E5%BF%83%E6%83%85%E6%97%A5%E8%AE%B0/",
+            "url": "https://bluedog1107.github.io/note/%E5%BF%83%E6%83%85%E6%97%A5%E8%AE%B0/",
+            "title": "心情日记",
+            "date_published": "2023-02-07T06:07:28.000Z",
+            "content_html": "<p>hello</p>\n",
             "tags": [
-                "测试"
+                "笔记",
+                "随记"
             ]
+        },
+        {
+            "id": "https://bluedog1107.github.io/websafe/%E7%BD%91%E7%AB%99%E5%AE%9E%E6%88%98/",
+            "url": "https://bluedog1107.github.io/websafe/%E7%BD%91%E7%AB%99%E5%AE%9E%E6%88%98/",
+            "title": "网站实战",
+            "date_published": "2023-02-07T06:05:25.000Z",
+            "content_html": "<p>xxxxx</p>\n",
+            "tags": [
+                "网安",
+                "渗透"
+            ]
+        },
+        {
+            "id": "https://bluedog1107.github.io/striky-article/",
+            "url": "https://bluedog1107.github.io/striky-article/",
+            "title": "sticky-article",
+            "date_published": "2023-02-07T05:31:38.000Z",
+            "content_html": "<p>这是一个置顶文章</p>\n",
+            "tags": []
         }
     ]
 }
