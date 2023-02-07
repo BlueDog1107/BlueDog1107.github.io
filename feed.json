@@ -2,11 +2,11 @@
     "version": "https://jsonfeed.org/version/1",
     "title": "This is BlueDog'house",
     "description": "这里是一个摆烂小狗的happy小屋，随缘更新",
-    "home_page_url": "http://example.com",
+    "home_page_url": "https://github.com/BlueDog1107/BlueDog1107.github.io",
     "items": [
         {
-            "id": "http://example.com/first-article/",
-            "url": "http://example.com/first-article/",
+            "id": "https://github.com/BlueDog1107/BlueDog1107.github.io/note/first-article/",
+            "url": "https://github.com/BlueDog1107/BlueDog1107.github.io/note/first-article/",
             "title": "first_article",
             "date_published": "2023-01-29T10:38:11.000Z",
             "content_html": "<p>this is my first article</p>\n",
