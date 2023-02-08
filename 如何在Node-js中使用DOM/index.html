@@ -1,0 +1,505 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#FFF">
+  <link rel="apple-touch-icon" sizes="180x180" href="//cdn.jsdelivr.net/gh/bluedog1107/BlueDog1107.github.io@latest/images/apple-touch-icon.png">
+
+<link rel="icon" type="image/ico" sizes="32x32" href="//cdn.jsdelivr.net/gh/bluedog1107/BlueDog1107.github.io@latest/images/favicon.ico">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+<link rel="alternate" type="application/rss+xml" title="This is BlueDog'house" href="https://bluedog1107.github.io/rss.xml" />
+<link rel="alternate" type="application/atom+xml" title="This is BlueDog'house" href="https://bluedog1107.github.io/atom.xml" />
+<link rel="alternate" type="application/json" title="This is BlueDog'house" href="https://bluedog1107.github.io/feed.json" />
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Mulish:300,300italic,400,400italic,700,700italic%7CFredericka%20the%20Great:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20JP:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20SC:300,300italic,400,400italic,700,700italic%7CInconsolata:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/gh/bluedog1107/BlueDog1107.github.io@latest/css/app.css?v=0.2.5">
+
+  
+  <meta name="keywords" content="代码,node.js,problem" />
+
+
+<link rel="canonical" href="https://bluedog1107.github.io/%E5%A6%82%E4%BD%95%E5%9C%A8Node-js%E4%B8%AD%E4%BD%BF%E7%94%A8DOM/">
+
+
+
+  <title>
+如何在Node.js中使用DOM |
+BlueDog'house = This is BlueDog'house = 今日无事，勾栏听曲</title>
+<meta name="generator" content="Hexo 5.4.0"></head>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div id="loading">
+    <div class="cat">
+      <div class="body"></div>
+      <div class="head">
+        <div class="face"></div>
+      </div>
+      <div class="foot">
+        <div class="tummy-end"></div>
+        <div class="bottom"></div>
+        <div class="legs left"></div>
+        <div class="legs right"></div>
+      </div>
+      <div class="paw">
+        <div class="hands left"></div>
+        <div class="hands right"></div>
+      </div>
+    </div>
+  </div>
+  <div id="container">
+    <header id="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="inner">
+        <div id="brand">
+          <div class="pjax">
+          
+  <h1 itemprop="name headline">如何在Node.js中使用DOM
+  </h1>
+  
+<div class="meta">
+  <span class="item" title="创建时间：2023-02-08 13:25:41">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <span class="text">发表于</span>
+    <time itemprop="dateCreated datePublished" datetime="2023-02-08T13:25:41+08:00">2023-02-08</time>
+  </span>
+  <span class="item" title="本文字数">
+    <span class="icon">
+      <i class="ic i-pen"></i>
+    </span>
+    <span class="text">本文字数</span>
+    <span>1.3k</span>
+    <span class="text">字</span>
+  </span>
+  <span class="item" title="阅读时长">
+    <span class="icon">
+      <i class="ic i-clock"></i>
+    </span>
+    <span class="text">阅读时长</span>
+    <span>1 分钟</span>
+  </span>
+</div>
+
+
+          </div>
+        </div>
+        <nav id="nav">
+  <div class="inner">
+    <div class="toggle">
+      <div class="lines" aria-label="切换导航栏">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+    </div>
+    <ul class="menu">
+      <li class="item title"><a href="/" rel="start">BlueDog'house</a></li>
+    </ul>
+    <ul class="right">
+      <li class="item theme">
+        <i class="ic i-sun"></i>
+      </li>
+      <li class="item search">
+        <i class="ic i-search"></i>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+      </div>
+      <div id="imgs" class="pjax">
+        <ul>
+          <li class="item" data-background-image="https://api.ixiaowai.cn/mcapi/mcapi2.php?488164"></li>
+          <li class="item" data-background-image="https://api.ixiaowai.cn/mcapi/mcapi2.php?709994"></li>
+          <li class="item" data-background-image="https://api.ixiaowai.cn/mcapi/mcapi2.php?955827"></li>
+          <li class="item" data-background-image="https://api.ixiaowai.cn/mcapi/mcapi2.php?736230"></li>
+          <li class="item" data-background-image="https://api.ixiaowai.cn/mcapi/mcapi2.php?933146"></li>
+          <li class="item" data-background-image="https://api.ixiaowai.cn/mcapi/mcapi2.php?448758"></li>
+        </ul>
+      </div>
+    </header>
+    <div id="waves">
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+          <use xlink:href="#gentle-wave" x="48" y="0" />
+          <use xlink:href="#gentle-wave" x="48" y="3" />
+          <use xlink:href="#gentle-wave" x="48" y="5" />
+          <use xlink:href="#gentle-wave" x="48" y="7" />
+        </g>
+      </svg>
+    </div>
+    <main>
+      <div class="inner">
+        <div id="main" class="pjax">
+          
+  <div class="article wrap">
+    
+<div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+<i class="ic i-home"></i>
+<span><a href="/">首页</a></span>
+</div>
+
+    <article itemscope itemtype="http://schema.org/Article" class="post block" lang="zh-CN">
+  <link itemprop="mainEntityOfPage" href="https://bluedog1107.github.io/%E5%A6%82%E4%BD%95%E5%9C%A8Node-js%E4%B8%AD%E4%BD%BF%E7%94%A8DOM/">
+
+  <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="image" content="//cdn.jsdelivr.net/gh/bluedog1107/BlueDog1107.github.io@latest/images/avatar.jpg">
+    <meta itemprop="name" content="BlueDog">
+    <meta itemprop="description" content="今日无事，勾栏听曲, 这里是一个摆烂小狗的happy小屋，随缘更新">
+  </span>
+
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="This is BlueDog'house">
+  </span>
+
+  <div class="body md" itemprop="articleBody">
+    
+
+    <h1 id="事件起因"><a class="markdownIt-Anchor" href="#事件起因">#</a> 事件起因</h1>
+<p>今天在进行 js 代码的学习中，尝试使用 dom 操作，代码如下：</p>
+<figure class="highlight js"><figcaption data-lang="JavaScript"><span>js代码 </span></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token keyword">var</span> x <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'demo'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>textContent<span class="token punctuation">;</span></pre></td></tr><tr><td data-num="2"></td><td><pre></pre></td></tr><tr><td data-num="3"></td><td><pre>console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr></table></figure><figure class="highlight html"><figcaption data-lang="HTML"><span>对应html代码</span></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token doctype"><span class="token punctuation">&lt;!</span><span class="token doctype-tag">DOCTYPE</span> <span class="token name">html</span><span class="token punctuation">></span></span></pre></td></tr><tr><td data-num="2"></td><td><pre><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span><span class="token punctuation">></span></span></pre></td></tr><tr><td data-num="3"></td><td><pre><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span></pre></td></tr><tr><td data-num="4"></td><td><pre>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>../js/test.js<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span></pre></td></tr><tr><td data-num="5"></td><td><pre><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">></span></span></pre></td></tr><tr><td data-num="6"></td><td><pre><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">></span></span></pre></td></tr><tr><td data-num="7"></td><td><pre></pre></td></tr><tr><td data-num="8"></td><td><pre>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span><span class="token punctuation">></span></span>通过ID名查找 HTML 元素<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">></span></span></pre></td></tr><tr><td data-num="9"></td><td><pre></pre></td></tr><tr><td data-num="10"></td><td><pre>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>demo<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Hello World<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span></pre></td></tr><tr><td data-num="11"></td><td><pre><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span></pre></td></tr><tr><td data-num="12"></td><td><pre><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span></pre></td></tr></table></figure><p>本该是正常运行的代码，结果在运行时发生了报错🙃，报错如下：</p>
+<figure class="highlight raw"><figcaption data-lang=""><span>报错信息</span></figcaption><table><tr><td data-num="1"></td><td><pre>var x &#x3D; document.getElementById(&#39;demo&#39;);</pre></td></tr><tr><td data-num="2"></td><td><pre>        ^</pre></td></tr><tr><td data-num="3"></td><td><pre>ReferenceError: document is not defined</pre></td></tr></table></figure><p>说我没有定义 document 属性，什么情况，于是赶紧求助搜素引擎，在看过众多文章后，发现都说的不是很全面，接下来我就来总结一下。</p>
+<h1 id="js运行环境"><a class="markdownIt-Anchor" href="#js运行环境">#</a> js 运行环境</h1>
+<p>首先，我们来了解一下 js 脚本的运行环境</p>
+<p>js 脚本的运行环境有两种，分别是<span class="kbd">浏览器环境</span>和<span class="kbd"> Node.js 环境</span>，而在上述代码所调用的<span class="blue"> document.getElementById ()</span> 是属于 DOM 的应用，而该应用需要在浏览器环境下才能运行。</p>
+<p>由于我是在 VSCode 中对 js 代码进行编译的使用的是<span class="kbd blue"> Code Runner</span>，其所配置的环境是 Node.js 环境，所以如果有 DOM 操作的话就会报错。</p>
+<h1 id="解决方式"><a class="markdownIt-Anchor" href="#解决方式">#</a> 解决方式</h1>
+<h2 id="使用jsdom"><a class="markdownIt-Anchor" href="#使用jsdom">#</a> 使用 jsdom</h2>
+<p>为了解决 Node.js 无法进行 DOM 操作的问题，官方给出了 jsdom 库来创建虚拟 dom 对象</p>
+<p>安装 jsdom</p>
+<figure class="highlight bash"><figcaption data-lang="bash"><span>安装jsdom</span></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token function">npm</span> i json</pre></td></tr></table></figure><p>修改 js 代码，引入 jsdom 库：</p>
+<figure class="highlight js"><figcaption data-lang="JavaScript"><span>js代码 </span></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token keyword">const</span> jsdom <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">"jsdom"</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="2"></td><td><pre><span class="token keyword">const</span> fs <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'fs'</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="3"></td><td><pre><span class="token keyword">const</span> path <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'path'</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="4"></td><td><pre><span class="token keyword">const</span> <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="5"></td><td><pre>    <span class="token constant">JSDOM</span></pre></td></tr><tr><td data-num="6"></td><td><pre><span class="token punctuation">&#125;</span> <span class="token operator">=</span> jsdom<span class="token punctuation">;</span></pre></td></tr><tr><td data-num="7"></td><td><pre><span class="token comment">// 读取 html</span></pre></td></tr><tr><td data-num="8"></td><td><pre><span class="token keyword">const</span> htmlData <span class="token operator">=</span> fs<span class="token punctuation">.</span><span class="token function">readFileSync</span><span class="token punctuation">(</span>path<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span><span class="token string">'./html/tstest.html'</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token punctuation">&#123;</span>encoding <span class="token operator">:</span> <span class="token string">'utf-8'</span><span class="token punctuation">,</span>flag <span class="token operator">:</span> <span class="token string">'r'</span><span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="9"></td><td><pre></pre></td></tr><tr><td data-num="10"></td><td><pre><span class="token comment">// 创建 dom 对象</span></pre></td></tr><tr><td data-num="11"></td><td><pre><span class="token keyword">const</span> dom <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">JSDOM</span><span class="token punctuation">(</span>htmlData<span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="12"></td><td><pre><span class="token keyword">const</span> document <span class="token operator">=</span> dom<span class="token punctuation">.</span>window<span class="token punctuation">.</span>document<span class="token punctuation">;</span></pre></td></tr><tr><td data-num="13"></td><td><pre></pre></td></tr><tr><td data-num="14"></td><td><pre><span class="token keyword">var</span> x <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'demo'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>textContent<span class="token punctuation">;</span></pre></td></tr><tr><td data-num="15"></td><td><pre></pre></td></tr><tr><td data-num="16"></td><td><pre>console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr></table></figure><div class="note warning">
+<p>注意：这里我们在读取 html 文件路径时最好使用<span class="kbd red"> readFileSync ()</span>，因为 readFileSync 能直接将文件数据返回给 htmlData, 如果使用<span class="kbd"> readFile ()</span> 则需要在回调函数中对 htmlData 进行赋值，且由于 js 代码是异步的，接下来的 dom 对象也要放入回调函数中，这样会使代码复杂化。</p>
+</div>
+<p>运行成功</p>
+<figure class="highlight bash"><figcaption data-lang="bash"><span>安装jsdom</span></figcaption><table><tr><td data-num="1"></td><td><pre>Hello World</pre></td></tr></table></figure>
+      <div class="tags">
+          <a href="/tags/%E4%BB%A3%E7%A0%81/" rel="tag"><i class="ic i-tag"></i> 代码</a>
+          <a href="/tags/node-js/" rel="tag"><i class="ic i-tag"></i> node.js</a>
+          <a href="/tags/problem/" rel="tag"><i class="ic i-tag"></i> problem</a>
+      </div>
+  </div>
+
+   <footer>
+
+    <div class="meta">
+  <span class="item">
+    <span class="icon">
+      <i class="ic i-calendar-check"></i>
+    </span>
+    <span class="text">更新于</span>
+    <time title="修改时间：2023-02-08 17:58:04" itemprop="dateModified" datetime="2023-02-08T17:58:04+08:00">2023-02-08</time>
+  </span>
+</div>
+
+      
+
+<div id="copyright">
+<ul>
+  <li class="author">
+    <strong>本文作者： </strong>BlueDog <i class="ic i-at"><em>@</em></i>This is BlueDog'house
+  </li>
+  <li class="link">
+    <strong>本文链接：</strong>
+    <a href="https://bluedog1107.github.io/%E5%A6%82%E4%BD%95%E5%9C%A8Node-js%E4%B8%AD%E4%BD%BF%E7%94%A8DOM/" title="如何在Node.js中使用DOM">https://bluedog1107.github.io/如何在Node-js中使用DOM/</a>
+  </li>
+  <li class="license">
+    <strong>版权声明： </strong>本站所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC96aC1DTg=="><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+  </footer>
+
+</article>
+
+  </div>
+  
+
+<div class="post-nav">
+    <div class="item left">
+      
+
+  <a href="/note/%E5%BF%83%E6%83%85%E6%97%A5%E8%AE%B0/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;api.ixiaowai.cn&#x2F;mcapi&#x2F;mcapi2.php?134497" title="心情日记">
+  <span class="type">上一篇</span>
+  <span class="category"><i class="ic i-flag"></i> 随记</span>
+  <h3>心情日记</h3>
+  </a>
+
+    </div>
+    <div class="item right">
+    </div>
+</div>
+
+  
+  <div class="wrap" id="comments"></div>
+
+
+        </div>
+        <div id="sidebar">
+          
+
+<div class="inner">
+
+  <div class="panels">
+    <div class="inner">
+      <div class="contents panel pjax" data-title="文章目录">
+          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BA%8B%E4%BB%B6%E8%B5%B7%E5%9B%A0"><span class="toc-number">1.</span> <span class="toc-text"> 事件起因</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#js%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83"><span class="toc-number">2.</span> <span class="toc-text"> js 运行环境</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%A7%A3%E5%86%B3%E6%96%B9%E5%BC%8F"><span class="toc-number">3.</span> <span class="toc-text"> 解决方式</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8jsdom"><span class="toc-number">3.1.</span> <span class="toc-text"> 使用 jsdom</span></a></li></ol></li></ol>
+      </div>
+      <div class="related panel pjax" data-title="系列文章">
+      </div>
+      <div class="overview panel" data-title="站点概览">
+        <div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <img class="image" itemprop="image" alt="BlueDog"
+      data-src="//cdn.jsdelivr.net/gh/bluedog1107/BlueDog1107.github.io@latest/images/avatar.jpg">
+  <p class="name" itemprop="name">BlueDog</p>
+  <div class="description" itemprop="description">这里是一个摆烂小狗的happy小屋，随缘更新</div>
+</div>
+
+<nav class="state">
+    <div class="item posts">
+      <a href="/archives/">
+        <span class="count">6</span>
+        <span class="name">文章</span>
+      </a>
+    </div>
+    <div class="item categories">
+      <a href="/categories/">
+        <span class="count">2</span>
+        <span class="name">分类</span>
+      </a>
+    </div>
+    <div class="item tags">
+      <a href="/tags/">
+        <span class="count">8</span>
+        <span class="name">标签</span>
+      </a>
+    </div>
+</nav>
+
+<div class="social">
+      <span class="exturl item github" data-url="aHR0cHM6Ly9naXRodWIuY29tL0JsdWVEb2cxMTA3" title="https:&#x2F;&#x2F;github.com&#x2F;BlueDog1107"><i class="ic i-github"></i></span>
+      <a href="/1984201243@qq.com" title="1984201243@qq.com" class="item email"><i class="ic i-qqmail"></i></a>
+</div>
+
+<ul class="menu">
+  
+    
+  <li class="item">
+    <a href="/" rel="section"><i class="ic i-home"></i>首页</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/about/" rel="section"><i class="ic i-user"></i>关于</a>
+  </li>
+
+        
+  <li class="item dropdown">
+      <a href="javascript:void(0);"><i class="ic i-feather"></i>文章</a>
+    <ul class="submenu">
+
+        
+  <li class="item">
+    <a href="/archives/" rel="section"><i class="ic i-list-alt"></i>归档</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/categories/" rel="section"><i class="ic i-th"></i>分类</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/tags/" rel="section"><i class="ic i-tags"></i>标签</a>
+  </li>
+
+  </ul>
+        
+  <li class="item dropdown">
+      <a href="javascript:void(0);"><i class="ic i-feather"></i>链环</a>
+    <ul class="submenu">
+
+        
+  <li class="item">
+    <a href="/friends/" rel="section"><i class="ic i-heart"></i>友链</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/links/" rel="section"><i class="ic i-magic"></i>网址</a>
+  </li>
+
+  </ul>
+
+</ul>
+
+      </div>
+    </div>
+  </div>
+
+  <ul id="quick">
+    <li class="prev pjax">
+    </li>
+    <li class="up"><i class="ic i-arrow-up"></i></li>
+    <li class="down"><i class="ic i-arrow-down"></i></li>
+    <li class="next pjax">
+    </li>
+    <li class="percent"></li>
+  </ul>
+</div>
+
+
+        </div>
+        <div class="dimmer"></div>
+      </div>
+    </main>
+    <footer id="footer">
+      <div class="inner">
+        <div class="widgets">
+          
+<div class="rpost pjax">
+  <h2>随机文章</h2>
+  <ul>
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/striky-article/" title="sticky-article">sticky-article</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/web-safe/" title="分类于 网络安全">网络安全</a>
+</div>
+
+    <span><a href="/web-safe/%E7%BD%91%E7%AB%99%E5%AE%9E%E6%88%98/" title="网站实战">网站实战</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/note/" title="分类于 随记">随记</a>
+</div>
+
+    <span><a href="/note/%E5%BF%83%E6%83%85%E6%97%A5%E8%AE%B0/" title="心情日记">心情日记</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/first-article/" title="first_article">first_article</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/%E5%A6%82%E4%BD%95%E5%9C%A8Node-js%E4%B8%AD%E4%BD%BF%E7%94%A8DOM/" title="如何在Node.js中使用DOM">如何在Node.js中使用DOM</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/web-safe/" title="分类于 网络安全">网络安全</a>
+</div>
+
+    <span><a href="/web-test/" title="web-test">web-test</a></span>
+  </li>
+
+  </ul>
+</div>
+<div>
+  <h2>最新评论</h2>
+  <ul class="leancloud-recent-comment"></ul>
+</div>
+
+        </div>
+        <div class="status">
+  <div class="copyright">
+    
+    &copy; 2010 – 
+    <span itemprop="copyrightYear">2023</span>
+    <span class="with-love">
+      <i class="ic i-sakura rotate"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">BlueDog @ BlueDog'house</span>
+  </div>
+  <div class="count">
+    <span class="post-meta-item-icon">
+      <i class="ic i-chart-area"></i>
+    </span>
+    <span title="站点总字数">1k 字</span>
+
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="ic i-coffee"></i>
+    </span>
+    <span title="站点阅读时长">1 分钟</span>
+  </div>
+  <div class="powered-by">
+    基于 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
+  </div>
+</div>
+
+      </div>
+    </footer>
+  </div>
+<script data-config type="text/javascript">
+  var LOCAL = {
+    path: '如何在Node-js中使用DOM/',
+    favicon: {
+      show: "（●´3｀●）やれやれだぜ",
+      hide: "(´Д｀)大変だ！"
+    },
+    search : {
+      placeholder: "文章搜索",
+      empty: "关于 「 ${query} 」，什么也没搜到",
+      stats: "${time} ms 内找到 ${hits} 条结果"
+    },
+    valine: true,fancybox: true,
+    copyright: '复制成功，转载请遵守 <i class="ic i-creative-commons"></i>BY-NC-SA 协议。',
+    ignores : [
+      function(uri) {
+        return uri.includes('#');
+      },
+      function(uri) {
+        return new RegExp(LOCAL.path+"$").test(uri);
+      }
+    ]
+  };
+</script>
+
+<script src="https://cdn.polyfill.io/v2/polyfill.js"></script>
+
+<script src="//cdn.jsdelivr.net/combine/npm/pace-js@1.0.2/pace.min.js,npm/pjax@0.2.8/pjax.min.js,npm/whatwg-fetch@3.4.0/dist/fetch.umd.min.js,npm/animejs@3.2.0/lib/anime.min.js,npm/algoliasearch@4/dist/algoliasearch-lite.umd.js,npm/instantsearch.js@4/dist/instantsearch.production.min.js,npm/lozad@1/dist/lozad.min.js,npm/quicklink@2/dist/quicklink.umd.js"></script>
+
+<script src="//cdn.jsdelivr.net/gh/bluedog1107/BlueDog1107.github.io@latest/js/app.js?v=0.2.5"></script>
+
+
+
+
+</body>
+</html>
