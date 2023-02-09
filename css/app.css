@@ -2240,10 +2240,10 @@ main >.inner {
   color: #191717;
 }
 .social .item.yuque::before {
-  background-color: #134412;
+  background-color: ##00aff0;
 }
 .social .item.yuque i {
-  color: #134412;
+  color: ##00aff0;
 }
 .social .item:focus i,
 .social .item:hover i {
