@@ -3,15 +3,22 @@
     <id>https://bluedog1107.github.io</id>
     <title>This is BlueDog&#39;house</title>
     <link href="https://bluedog1107.github.io" />
-    <updated>2023-02-08T05:25:41.000Z</updated>
-    <category term="测试" />
-    <category term="网安" />
-    <category term="笔记" />
-    <category term="随记" />
-    <category term="渗透" />
+    <updated>2023-02-09T02:04:16.000Z</updated>
+    <category term="first-article" />
     <category term="代码" />
     <category term="node.js" />
     <category term="problem" />
+    <category term="日记" />
+    <entry>
+        <id>https://bluedog1107.github.io/note/%E5%BF%83%E6%83%85%E6%97%A5%E8%AE%B0/</id>
+        <title>生活日记</title>
+        <link rel="alternate" href="https://bluedog1107.github.io/note/%E5%BF%83%E6%83%85%E6%97%A5%E8%AE%B0/"/>
+        <content type="html">&lt;h1 id=&#34;202229&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#202229&#34;&gt;#&lt;/a&gt; 2022.2.9&lt;/h1&gt;
+&lt;p&gt;今天是记录生活的第一天😎&lt;/p&gt;
+</content>
+        <category term="日记" />
+        <updated>2023-02-09T02:04:16.000Z</updated>
+    </entry>
     <entry>
         <id>https://bluedog1107.github.io/%E5%A6%82%E4%BD%95%E5%9C%A8Node-js%E4%B8%AD%E4%BD%BF%E7%94%A8DOM/</id>
         <title>如何在Node.js中使用DOM</title>
@@ -40,49 +47,13 @@
         <updated>2023-02-08T05:25:41.000Z</updated>
     </entry>
     <entry>
-        <id>https://bluedog1107.github.io/note/%E5%BF%83%E6%83%85%E6%97%A5%E8%AE%B0/</id>
-        <title>心情日记</title>
-        <link rel="alternate" href="https://bluedog1107.github.io/note/%E5%BF%83%E6%83%85%E6%97%A5%E8%AE%B0/"/>
-        <content type="html">&lt;p&gt;hello&lt;/p&gt;
-</content>
-        <category term="笔记" />
-        <category term="随记" />
-        <updated>2023-02-07T06:07:28.000Z</updated>
-    </entry>
-    <entry>
-        <id>https://bluedog1107.github.io/web-safe/%E7%BD%91%E7%AB%99%E5%AE%9E%E6%88%98/</id>
-        <title>网站实战</title>
-        <link rel="alternate" href="https://bluedog1107.github.io/web-safe/%E7%BD%91%E7%AB%99%E5%AE%9E%E6%88%98/"/>
-        <content type="html">&lt;p&gt;xxxxx&lt;/p&gt;
-</content>
-        <category term="网安" />
-        <category term="渗透" />
-        <updated>2023-02-07T06:05:25.000Z</updated>
-    </entry>
-    <entry>
-        <id>https://bluedog1107.github.io/striky-article/</id>
-        <title>sticky-article</title>
-        <link rel="alternate" href="https://bluedog1107.github.io/striky-article/"/>
-        <content type="html">&lt;p&gt;这是一个置顶文章&lt;/p&gt;
-</content>
-        <updated>2023-02-07T05:31:38.000Z</updated>
-    </entry>
-    <entry>
-        <id>https://bluedog1107.github.io/web-test/</id>
-        <title>web-test</title>
-        <link rel="alternate" href="https://bluedog1107.github.io/web-test/"/>
-        <content type="html">&lt;p&gt;this is web—test&lt;/p&gt;
-</content>
-        <category term="网安" />
-        <updated>2023-02-07T05:17:43.000Z</updated>
-    </entry>
-    <entry>
         <id>https://bluedog1107.github.io/first-article/</id>
         <title>first_article</title>
         <link rel="alternate" href="https://bluedog1107.github.io/first-article/"/>
-        <content type="html">&lt;p&gt;this is my first article&lt;/p&gt;
+        <content type="html">&lt;h1 id=&#34;第一篇文章&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#第一篇文章&#34;&gt;#&lt;/a&gt; 第一篇文章&lt;/h1&gt;
+&lt;p&gt;这是我 blog 的&lt;ins&gt;第一篇&lt;/ins&gt;文章，特此记录😎&lt;/p&gt;
 </content>
-        <category term="测试" />
+        <category term="first-article" />
         <updated>2023-01-29T10:38:11.000Z</updated>
     </entry>
 </feed>

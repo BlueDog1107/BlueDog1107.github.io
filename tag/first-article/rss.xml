@@ -1,27 +1,25 @@
 <?xml version="1.0"?>
 <rss version="2.0">
     <channel>
-        <title>This is BlueDog&#39;house • Posts by &#34;测试&#34; tag</title>
+        <title>This is BlueDog&#39;house • Posts by &#34;first-article&#34; tag</title>
         <link>https://bluedog1107.github.io</link>
         <description>这里是一个摆烂小狗的happy小屋，随缘更新</description>
         <language>zh-CN</language>
         <pubDate>Sun, 29 Jan 2023 18:38:11 +0800</pubDate>
         <lastBuildDate>Sun, 29 Jan 2023 18:38:11 +0800</lastBuildDate>
-        <category>测试</category>
-        <category>网安</category>
-        <category>笔记</category>
-        <category>随记</category>
-        <category>渗透</category>
+        <category>first-article</category>
         <category>代码</category>
         <category>node.js</category>
         <category>problem</category>
+        <category>日记</category>
         <item>
             <guid isPermalink="true">https://bluedog1107.github.io/first-article/</guid>
             <title>first_article</title>
             <link>https://bluedog1107.github.io/first-article/</link>
-            <category>测试</category>
+            <category>first-article</category>
             <pubDate>Sun, 29 Jan 2023 18:38:11 +0800</pubDate>
-            <description><![CDATA[ &lt;p&gt;this is my first article&lt;/p&gt;
+            <description><![CDATA[ &lt;h1 id=&#34;第一篇文章&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#第一篇文章&#34;&gt;#&lt;/a&gt; 第一篇文章&lt;/h1&gt;
+&lt;p&gt;这是我 blog 的&lt;ins&gt;第一篇&lt;/ins&gt;文章，特此记录😎&lt;/p&gt;
  ]]></description>
         </item>
     </channel>

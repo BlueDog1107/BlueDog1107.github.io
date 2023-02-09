@@ -5,6 +5,16 @@
     "home_page_url": "https://bluedog1107.github.io",
     "items": [
         {
+            "id": "https://bluedog1107.github.io/note/%E5%BF%83%E6%83%85%E6%97%A5%E8%AE%B0/",
+            "url": "https://bluedog1107.github.io/note/%E5%BF%83%E6%83%85%E6%97%A5%E8%AE%B0/",
+            "title": "生活日记",
+            "date_published": "2023-02-09T02:04:16.000Z",
+            "content_html": "<h1 id=\"202229\"><a class=\"markdownIt-Anchor\" href=\"#202229\">#</a> 2022.2.9</h1>\n<p>今天是记录生活的第一天😎</p>\n",
+            "tags": [
+                "日记"
+            ]
+        },
+        {
             "id": "https://bluedog1107.github.io/%E5%A6%82%E4%BD%95%E5%9C%A8Node-js%E4%B8%AD%E4%BD%BF%E7%94%A8DOM/",
             "url": "https://bluedog1107.github.io/%E5%A6%82%E4%BD%95%E5%9C%A8Node-js%E4%B8%AD%E4%BD%BF%E7%94%A8DOM/",
             "title": "如何在Node.js中使用DOM",
@@ -17,53 +27,13 @@
             ]
         },
         {
-            "id": "https://bluedog1107.github.io/note/%E5%BF%83%E6%83%85%E6%97%A5%E8%AE%B0/",
-            "url": "https://bluedog1107.github.io/note/%E5%BF%83%E6%83%85%E6%97%A5%E8%AE%B0/",
-            "title": "心情日记",
-            "date_published": "2023-02-07T06:07:28.000Z",
-            "content_html": "<p>hello</p>\n",
-            "tags": [
-                "笔记",
-                "随记"
-            ]
-        },
-        {
-            "id": "https://bluedog1107.github.io/web-safe/%E7%BD%91%E7%AB%99%E5%AE%9E%E6%88%98/",
-            "url": "https://bluedog1107.github.io/web-safe/%E7%BD%91%E7%AB%99%E5%AE%9E%E6%88%98/",
-            "title": "网站实战",
-            "date_published": "2023-02-07T06:05:25.000Z",
-            "content_html": "<p>xxxxx</p>\n",
-            "tags": [
-                "网安",
-                "渗透"
-            ]
-        },
-        {
-            "id": "https://bluedog1107.github.io/striky-article/",
-            "url": "https://bluedog1107.github.io/striky-article/",
-            "title": "sticky-article",
-            "date_published": "2023-02-07T05:31:38.000Z",
-            "content_html": "<p>这是一个置顶文章</p>\n",
-            "tags": []
-        },
-        {
-            "id": "https://bluedog1107.github.io/web-test/",
-            "url": "https://bluedog1107.github.io/web-test/",
-            "title": "web-test",
-            "date_published": "2023-02-07T05:17:43.000Z",
-            "content_html": "<p>this is web—test</p>\n",
-            "tags": [
-                "网安"
-            ]
-        },
-        {
             "id": "https://bluedog1107.github.io/first-article/",
             "url": "https://bluedog1107.github.io/first-article/",
             "title": "first_article",
             "date_published": "2023-01-29T10:38:11.000Z",
-            "content_html": "<p>this is my first article</p>\n",
+            "content_html": "<h1 id=\"第一篇文章\"><a class=\"markdownIt-Anchor\" href=\"#第一篇文章\">#</a> 第一篇文章</h1>\n<p>这是我 blog 的<ins>第一篇</ins>文章，特此记录😎</p>\n",
             "tags": [
-                "测试"
+                "first-article"
             ]
         }
     ]
