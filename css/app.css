@@ -427,6 +427,7 @@
   content: "\e6c1";
 }
 .i-star:before,
+.article .md h3 .anchor::before,
 .page .body h3 .anchor::before {
   content: "\f0d4";
 }
@@ -457,6 +458,8 @@ details[open] summary::before {
   content: "\f03e";
 }
 .i-sakura:before,
+.article .md .anchor::after,
+.article .md h1 .anchor::before,
 .page .body h1 .anchor::before {
   content: "\e695";
 }
@@ -544,6 +547,7 @@ details summary::before {
   content: "\f013";
 }
 .i-heartbeat:before,
+.article .md h2 .anchor::before,
 .page .body h2 .anchor::before {
   content: "\f017";
 }
@@ -767,14 +771,18 @@ body.loaded::-webkit-scrollbar-thumb {
   background-color: var(--color-pink-light);
 }
 .rotate,
+.article .md .anchor::after,
+.article .md h1 .anchor::before,
 .page .body h1 .anchor::before {
   animation: rotate 6s linear infinite;
 }
 .beat,
+.article .md h2 .anchor::before,
 .page .body h2 .anchor::before {
   animation: beat 1.33s ease-in-out infinite;
 }
 .flash,
+.article .md h3 .anchor::before,
 .page .body h3 .anchor::before {
   animation: flash 6s cubic-bezier(0.22, 0.61, 0.36, 1) infinite;
 }
@@ -2912,7 +2920,6 @@ main >.inner {
   color: transparent;
   animation: rainbow 60s linear infinite;
 }
-.article .md .anchor::before,
 .article .md .anchor::after {
   content: "H";
   font-family: 'Mulish', -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
@@ -2925,7 +2932,6 @@ main >.inner {
   font-size: 80%;
 }
 @media (max-width: 567px) {
-  .article .md .anchor::before,
   .article .md .anchor::after {
     left: -0.625rem;
   }
@@ -3079,6 +3085,53 @@ main >.inner {
   font-size: 1.1rem;
   line-height: 0.75rem;
   vertical-align: -0.0667rem;
+}
+.article .md .anchor::before {
+  font-family: 'ic';
+  font-weight: normal;
+  color: var(--grey-4);
+  position: absolute;
+  left: -1.5625rem;
+  margin-top: 0.25rem;
+  visibility: visible;
+}
+@media (max-width: 567px) {
+  .article .md .anchor::before {
+    left: -0.1875rem;
+  }
+}
+.article .md .anchor::after,
+.article .md h1 .anchor::before {
+  font-size: 0.875em;
+  margin-top: 0.15rem;
+  color: #ffc0cb;
+  left: -1.875rem;
+}
+@media (max-width: 567px) {
+  .article .md .anchor::after,
+  .article .md h1 .anchor::before {
+    left: -0.3125rem;
+  }
+}
+.article .md h2 .anchor::before {
+  font-size: 0.8125em;
+  color: var(--color-pink);
+}
+.article .md h3 .anchor::before {
+  font-size: 0.75em;
+  color: var(--color-orange);
+}
+.article .md h1 .anchor::after {
+  content: none;
+}
+.article .md h2 .anchor::after {
+  content: none;
+}
+.article .md h3 .anchor::after {
+  content: none;
+}
+.article .md h4 .anchor::after {
+  content: none;
 }
 .cards .item,
 .segments > .item {
